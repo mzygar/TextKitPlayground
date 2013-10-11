@@ -34,6 +34,16 @@
 }
 - (IBAction)hideText:(id)sender {
     _shouldDisplay=!_shouldDisplay;
+    if(!_shouldDisplay)
+    {
+        NSTextAttachment* att=[[NSTextAttachment alloc] init];
+        att.image=[UIImage imageNamed:@"dot.png"];
+        NSAttributedString* astring=[NSAttributedString attributedStringWithAttachment:att];
+        [self.textView.textStorage insertAttributedString:astring atIndex:0];
+    }else
+    {
+        [self.textView.textStorage deleteCharactersInRange:NSMakeRange(0, 1)];
+    }
     [_layoutManager invalidateDisplayForCharacterRange:NSMakeRange(0, 20)];
     [_layoutManager ensureGlyphsForCharacterRange:NSMakeRange(0, 20)];
     [[self.textView textStorage] edited:NSTextStorageEditedCharacters range:NSMakeRange(0, 20) changeInLength:0];
