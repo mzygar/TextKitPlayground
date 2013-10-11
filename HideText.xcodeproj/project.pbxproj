@@ -23,6 +23,8 @@
 		370A390A1807FDEC00380639 /* HideTextTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 370A39091807FDEC00380639 /* HideTextTests.m */; };
 		370A391418081A4800380639 /* dot.png in Resources */ = {isa = PBXBuildFile; fileRef = 370A391318081A4800380639 /* dot.png */; };
 		370A391518081A4800380639 /* dot.png in Resources */ = {isa = PBXBuildFile; fileRef = 370A391318081A4800380639 /* dot.png */; };
+		370A39181808358800380639 /* HTTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 370A39171808358800380639 /* HTTextView.m */; };
+		370A39191808358800380639 /* HTTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 370A39171808358800380639 /* HTTextView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 		370A39071807FDEC00380639 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		370A39091807FDEC00380639 /* HideTextTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HideTextTests.m; sourceTree = "<group>"; };
 		370A391318081A4800380639 /* dot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dot.png; sourceTree = "<group>"; };
+		370A39161808358800380639 /* HTTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTextView.h; sourceTree = "<group>"; };
+		370A39171808358800380639 /* HTTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTextView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +127,8 @@
 				370A38F41807FDEC00380639 /* HTViewController.m */,
 				370A38F61807FDEC00380639 /* Images.xcassets */,
 				370A38E51807FDEC00380639 /* Supporting Files */,
+				370A39161808358800380639 /* HTTextView.h */,
+				370A39171808358800380639 /* HTTextView.m */,
 			);
 			path = HideText;
 			sourceTree = "<group>";
@@ -259,6 +265,7 @@
 				370A38F51807FDEC00380639 /* HTViewController.m in Sources */,
 				370A38EF1807FDEC00380639 /* HTAppDelegate.m in Sources */,
 				370A38EB1807FDEC00380639 /* main.m in Sources */,
+				370A39181808358800380639 /* HTTextView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				370A390A1807FDEC00380639 /* HideTextTests.m in Sources */,
+				370A39191808358800380639 /* HTTextView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

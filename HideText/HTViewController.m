@@ -8,7 +8,7 @@
 
 #import "HTViewController.h"
 
-@interface HTViewController ()<NSLayoutManagerDelegate>
+@interface HTViewController ()<NSLayoutManagerDelegate,UITextViewDelegate>
 {
     NSLayoutManager* _layoutManager;
     BOOL _shouldDisplay;
@@ -23,8 +23,13 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    self.textView.delegate=self;
+    self.textView.selectable=YES;
+//    self.textView.editable=NO;
     _layoutManager=self.textView.layoutManager;
     [_layoutManager setDelegate:self];
+    _shouldDisplay=YES;
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -39,17 +44,33 @@
         NSTextAttachment* att=[[NSTextAttachment alloc] init];
         att.image=[UIImage imageNamed:@"dot.png"];
         NSAttributedString* astring=[NSAttributedString attributedStringWithAttachment:att];
-        [self.textView.textStorage insertAttributedString:astring atIndex:0];
+        NSMutableAttributedString* str=[[NSMutableAttributedString alloc] initWithAttributedString:astring ];
+//        [str addAttribute:NSLinkAttributeName value:[NSURL URLWithString:@"http://wp.pl"] range:NSMakeRange(0,str.length)];
+        [self.textView.textStorage insertAttributedString:str atIndex:5];
     }else
     {
         [self.textView.textStorage deleteCharactersInRange:NSMakeRange(0, 1)];
     }
-    [_layoutManager invalidateDisplayForCharacterRange:NSMakeRange(0, 20)];
-    [_layoutManager ensureGlyphsForCharacterRange:NSMakeRange(0, 20)];
+    _shouldDisplay=YES;
+//    [_layoutManager invalidateDisplayForCharacterRange:NSMakeRange(0, 20)];
+//    [_layoutManager ensureGlyphsForCharacterRange:NSMakeRange(0, 20)];
     [[self.textView textStorage] edited:NSTextStorageEditedCharacters range:NSMakeRange(0, 20) changeInLength:0];
     [self.textView setNeedsDisplay];
 }
 
+-(void)textViewDidBeginEditing:(UITextView *)textView
+{
+    NSLog(@"sss");
+}
+-(BOOL)textView:(UITextView *)textView shouldInteractWithURL:(NSURL *)URL inRange:(NSRange)characterRange
+{
+    return YES;
+}
+-(BOOL)textView:(UITextView *)textView shouldInteractWithTextAttachment:(NSTextAttachment *)textAttachment inRange:(NSRange)characterRange
+{
+    [self hideText:Nil];
+    return YES;
+}
 -(NSUInteger)layoutManager:(NSLayoutManager *)layoutManager
       shouldGenerateGlyphs:(const CGGlyph *)glyphs
                 properties:(const NSGlyphProperty *)props
