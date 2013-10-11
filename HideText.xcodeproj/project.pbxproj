@@ -21,6 +21,8 @@
 		370A39001807FDEC00380639 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 370A38E21807FDEB00380639 /* UIKit.framework */; };
 		370A39081807FDEC00380639 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 370A39061807FDEC00380639 /* InfoPlist.strings */; };
 		370A390A1807FDEC00380639 /* HideTextTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 370A39091807FDEC00380639 /* HideTextTests.m */; };
+		370A391418081A4800380639 /* dot.png in Resources */ = {isa = PBXBuildFile; fileRef = 370A391318081A4800380639 /* dot.png */; };
+		370A391518081A4800380639 /* dot.png in Resources */ = {isa = PBXBuildFile; fileRef = 370A391318081A4800380639 /* dot.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,7 @@
 		370A39051807FDEC00380639 /* HideTextTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HideTextTests-Info.plist"; sourceTree = "<group>"; };
 		370A39071807FDEC00380639 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		370A39091807FDEC00380639 /* HideTextTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HideTextTests.m; sourceTree = "<group>"; };
+		370A391318081A4800380639 /* dot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dot.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +115,7 @@
 		370A38E41807FDEB00380639 /* HideText */ = {
 			isa = PBXGroup;
 			children = (
+				370A391318081A4800380639 /* dot.png */,
 				370A38ED1807FDEC00380639 /* HTAppDelegate.h */,
 				370A38EE1807FDEC00380639 /* HTAppDelegate.m */,
 				370A38F01807FDEC00380639 /* Main.storyboard */,
@@ -230,6 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				370A38F71807FDEC00380639 /* Images.xcassets in Resources */,
+				370A391418081A4800380639 /* dot.png in Resources */,
 				370A38E91807FDEC00380639 /* InfoPlist.strings in Resources */,
 				370A38F21807FDEC00380639 /* Main.storyboard in Resources */,
 			);
@@ -240,6 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				370A39081807FDEC00380639 /* InfoPlist.strings in Resources */,
+				370A391518081A4800380639 /* dot.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
